@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Hospital | Sanskriti Chikitsalaya | SSMCRC</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+.service-card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,.07);display:flex;gap:16px;align-items:flex-start;transition:.3s;border-left:4px solid transparent;}
+.service-card:hover{border-left-color:var(--red);transform:translateX(4px);}
+.service-card i{font-size:36px;color:var(--indigo);flex-shrink:0;}
+.service-card h4{font-family:"Montserrat",sans-serif;font-size:15px;font-weight:700;color:var(--primary);margin-bottom:6px;}
+.service-card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0;}
+.opd-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.opd-item{background:var(--offwhite);border-radius:10px;padding:16px 18px;border-left:3px solid var(--indigo);}
+.opd-item h5{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;color:var(--primary);margin-bottom:4px;}
+.opd-item p{font-size:12px;color:var(--muted);margin:0;}
+</style>
+</head>
+<body>
+<div class="notice-bar"><div class="wrapper"><div class="notice-inner"><div class="notice-label">Hospital</div><div class="notice-scroll"><div class="notice-track"><span>Sanskriti Chikitsalaya — 24x7 Emergency | OPD: Mon–Sat 8AM–2PM</span><span>464 Teaching Beds | 84 ICU Beds | 5 Modular OTs | Blood Bank | Pharmacy</span><span>Ambulance: +91-565-228-9999</span><span>Sanskriti Chikitsalaya — 24x7 Emergency | OPD: Mon–Sat 8AM–2PM</span></div></div></div></div></div>
+<header class="site-header">
+  <div class="header-top"><div class="wrapper"><div class="header-top-inner">
+    <div class="contact-links"><a href="mailto:hospital@sanskritimedical.edu.in"><i class="ti ti-mail"></i> hospital@sanskritimedical.edu.in</a><a href="tel:+915652289999"><i class="ti ti-phone"></i> Emergency: +91-565-228-9999</a><a href="#"><i class="ti ti-ambulance"></i> 24x7 Ambulance</a></div>
+    <div style="display:flex;align-items:center;gap:18px;"><div class="social-links"><a href="#"><i class="ti ti-brand-facebook"></i></a><a href="#"><i class="ti ti-brand-whatsapp"></i></a></div><a href="admissions.html" class="admission-cta-small">Admissions 2026</a></div>
+  </div></div></div>
+  <div class="header-bottom"><div style="display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1280px;margin:0 auto;padding:0 30px;">
+    <div class="logo-wrap"><a href="index.html"><img src="assets/img/logo.jpeg" alt="Sanskriti Santosh Medical College Logo"></a></div>
+    <nav class="main-nav"><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="academics.html">Academics</a></li><li><a href="admissions.html">Admissions</a></li>
+      <li><a href="hospital.html" class="active">Hospital <i class="ti ti-chevron-down"></i></a><ul class="dropdown"><li><a href="#overview">Hospital Overview</a></li><li><a href="#beds">Bed Distribution</a></li><li><a href="#opd">OPD Services</a></li><li><a href="#emergency">Emergency</a></li><li><a href="#icu">ICU / HDU</a></li><li><a href="#ot">Operation Theatres</a></li><li><a href="#diagnostics">Diagnostics</a></li><li><a href="#pharmacy">Pharmacy & Blood Bank</a></li></ul></li>
+      <li><a href="infrastructure.html">Infrastructure</a></li><li><a href="research.html">Research</a></li><li><a href="media.html">Media</a></li><li><a href="statutory.html">Statutory</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+  </div></div>
+</header>
+<section class="page-hero teal">
+  <div class="wrapper"><div class="page-hero-inner">
+    <div class="breadcrumb-nav"><a href="index.html">Home</a><span>›</span><span class="current">Sanskriti Chikitsalaya — Hospital</span></div>
+    <h1>Sanskriti Chikitsalaya<br>Our 464-Bed Teaching Hospital</h1>
+    <p>A fully-equipped, multi-speciality teaching hospital on NH-19, Chhata, Mathura — delivering quality patient care and world-class clinical training round the clock.</p>
+    <div class="page-hero-actions"><a href="#opd" class="btn-red">OPD Schedule <i class="ti ti-arrow-narrow-right"></i></a><a href="tel:+915652289999" class="btn-outline-white"><i class="ti ti-phone"></i> Emergency: +91-565-228-9999</a></div>
+  </div></div>
+</section>
+<div style="background:#0a5c6e;padding:0;"><div class="wrapper"><div style="display:grid;grid-template-columns:repeat(5,1fr);" class="count-section">
+  <div class="stat-strip-item"><div class="stat-strip-num"><span data-count="464">0</span><em>+</em></div><div class="stat-strip-label">Total Beds</div></div>
+  <div class="stat-strip-item"><div class="stat-strip-num"><span data-count="84">0</span><em>+</em></div><div class="stat-strip-label">ICU Beds</div></div>
+  <div class="stat-strip-item"><div class="stat-strip-num"><span data-count="5">0</span></div><div class="stat-strip-label">Modular OTs</div></div>
+  <div class="stat-strip-item"><div class="stat-strip-num"><span data-count="26">0</span></div><div class="stat-strip-label">Wards</div></div>
+  <div class="stat-strip-item"><div class="stat-strip-num">24<em>/7</em></div><div class="stat-strip-label">Emergency</div></div>
+</div></div></div>
+<div class="wrapper"><div class="page-layout">
+<aside>
+  <div class="sidebar-nav">
+    <div class="sidebar-heading">Hospital</div>
+    <ul class="sidebar-links">
+      <li><a href="#overview" class="active"><i class="ti ti-building-hospital"></i> Overview</a></li>
+      <li><a href="#beds"><i class="ti ti-bed"></i> Bed Distribution</a></li>
+      <li><a href="#opd"><i class="ti ti-stethoscope"></i> OPD Services</a></li>
+      <li><a href="#ipd"><i class="ti ti-calendar-check"></i> IPD Services</a></li>
+      <li><a href="#emergency"><i class="ti ti-urgent"></i> Emergency (24x7)</a></li>
+      <li><a href="#icu"><i class="ti ti-heartbeat"></i> ICU / HDU</a></li>
+      <li><a href="#ot"><i class="ti ti-scalpel"></i> Operation Theatres</a></li>
+      <li><a href="#diagnostics"><i class="ti ti-test-pipe"></i> Diagnostics</a></li>
+      <li><a href="#pharmacy"><i class="ti ti-pill"></i> Pharmacy</a></li>
+      <li><a href="#blood-bank"><i class="ti ti-droplet-half-2"></i> Blood Bank</a></li>
+      <li><a href="#ambulance"><i class="ti ti-ambulance"></i> Ambulance</a></li>
+      <li><a href="#patient-facilities"><i class="ti ti-users"></i> Patient Facilities</a></li>
+    </ul>
+    <div class="sidebar-cta"><h4>Emergency Services</h4><p>24x7 emergency with trauma bay and resuscitation unit.</p><a href="tel:+915652289999">📞 Emergency Line</a></div>
+  </div>
+</aside>
+<main>
+<div class="content-card" id="overview">
+  <h2><i class="ti ti-building-hospital"></i> Hospital Overview</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
+    <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=500&h=280&fit=crop" alt="Hospital" style="width:100%;border-radius:12px;height:220px;object-fit:cover;">
+    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=500&h=280&fit=crop" alt="ICU" style="width:100%;border-radius:12px;height:220px;object-fit:cover;">
+  </div>
+  <p>Sanskriti Chikitsalaya is a 464-bed multi-speciality teaching hospital, the primary clinical training ground for MBBS students of SSMCRC. Strategically located on NH-19, Chhata, Mathura, it serves as both a regional healthcare provider and an advanced teaching hospital as mandated by the NMC.</p>
+  <p>The hospital runs 13 clinical departments, 26 wards, 84 ICU beds, 44 HDU beds, 128 motorized beds, 5 modular operation theatres, a 24/7 emergency department, NABL-accredited diagnostic labs, NACO-compliant blood bank, and round-the-clock pharmacy services.</p>
+  <div class="info-grid">
+    <div class="info-box"><h4>Location</h4><p>NH-19, Chhata, Mathura, Uttar Pradesh – 281401</p></div>
+    <div class="info-box red"><h4>Type</h4><p>Multi-Speciality Teaching Hospital | 464 Beds | NMC Mandated</p></div>
+    <div class="info-box gold"><h4>OPD Timings</h4><p>Monday to Saturday | 8:00 AM – 2:00 PM | Emergency: 24×7</p></div>
+    <div class="info-box green"><h4>Approvals</h4><p>NMC-recognized Teaching Hospital | NABL Lab | NACO Blood Bank</p></div>
+  </div>
+</div>
+<div class="content-card" id="beds">
+  <h2><i class="ti ti-bed"></i> Departmentwise Bed Distribution</h2>
+  <table class="data-table striped">
+    <thead><tr><th>Dept.</th><th>Units</th><th>Wards</th><th>Total Beds</th><th>ICU Beds</th><th>HDU Beds</th><th>Motorized</th></tr></thead>
+    <tbody>
+      <tr><td>Emergency</td><td>1</td><td>1</td><td>30</td><td>30</td><td>0</td><td>30</td></tr>
+      <tr><td>ICU/SICU/MICU/BICU/HDU</td><td>5</td><td>5</td><td>20</td><td>20</td><td>2</td><td>22</td></tr>
+      <tr><td>Post OP</td><td>1</td><td>1</td><td>7</td><td>7</td><td>0</td><td>7</td></tr>
+      <tr><td>Pre OP</td><td>1</td><td>1</td><td>7</td><td>7</td><td>0</td><td>7</td></tr>
+      <tr><td>General Medicine</td><td>4</td><td>4</td><td>100</td><td>10</td><td>5</td><td>15</td></tr>
+      <tr><td>Dermatology</td><td>1</td><td>1</td><td>10</td><td>0</td><td>2</td><td>2</td></tr>
+      <tr><td>Psychiatry</td><td>1</td><td>1</td><td>10</td><td>0</td><td>2</td><td>2</td></tr>
+      <tr><td>Paediatrics</td><td>2</td><td>2</td><td>50</td><td>5</td><td>3</td><td>8</td></tr>
+      <tr><td>General Surgery</td><td>4</td><td>4</td><td>100</td><td>5</td><td>10</td><td>15</td></tr>
+      <tr><td>Orthopaedics</td><td>2</td><td>2</td><td>40</td><td>0</td><td>6</td><td>6</td></tr>
+      <tr><td>Ophthalmology</td><td>1</td><td>1</td><td>20</td><td>0</td><td>3</td><td>3</td></tr>
+      <tr><td>ENT</td><td>1</td><td>1</td><td>20</td><td>0</td><td>3</td><td>3</td></tr>
+      <tr><td>Obstetrics & Gynaecology</td><td>2</td><td>2</td><td>50</td><td>0</td><td>8</td><td>8</td></tr>
+    </tbody>
+    <tfoot><tr><td><strong>Total</strong></td><td>26</td><td>26</td><td>464</td><td>84</td><td>44</td><td>128</td></tr></tfoot>
+  </table>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px;">
+    <div style="background:var(--gold);border-radius:10px;padding:18px;text-align:center;color:var(--primary);"><div style="font-family:Montserrat,sans-serif;font-size:36px;font-weight:800;">128</div><div style="font-size:13px;font-weight:600;">Motorized Beds</div></div>
+    <div style="background:var(--red);border-radius:10px;padding:18px;text-align:center;color:#fff;"><div style="font-family:Montserrat,sans-serif;font-size:36px;font-weight:800;">336</div><div style="font-size:13px;font-weight:600;">Normal Beds</div></div>
+    <div style="background:var(--indigo);border-radius:10px;padding:18px;text-align:center;color:#fff;"><div style="font-family:Montserrat,sans-serif;font-size:36px;font-weight:800;">464</div><div style="font-size:13px;font-weight:600;">Teaching Beds (Total)</div></div>
+  </div>
+  <div class="alert alert-info" style="margin-top:12px;"><i class="ti ti-info-circle"></i> All ICU, HDU & Emergency beds are Semi-Fowler (motorized) beds. ICU and HDU beds are counted in total bed strength as per NMC guidelines.</div>
+</div>
+<div class="content-card" id="opd">
+  <h2><i class="ti ti-stethoscope"></i> OPD Services</h2>
+  <div class="alert alert-success" style="margin-bottom:16px;"><i class="ti ti-clock"></i> OPD Timings: Monday to Saturday | 8:00 AM – 2:00 PM | Token-based queue system</div>
+  <div class="opd-row">
+    <div class="opd-item"><h5>General Medicine OPD</h5><p>Mon–Sat | 8AM–2PM | 4 Units</p></div>
+    <div class="opd-item"><h5>General Surgery OPD</h5><p>Mon–Sat | 8AM–2PM | 4 Units</p></div>
+    <div class="opd-item"><h5>Paediatrics OPD</h5><p>Mon–Sat | 9AM–1PM | 2 Units</p></div>
+    <div class="opd-item"><h5>Obs. & Gynaecology OPD</h5><p>Mon–Sat | 9AM–1PM | Special clinics Tue & Fri</p></div>
+    <div class="opd-item"><h5>Orthopaedics OPD</h5><p>Mon–Sat | 9AM–1PM | Fracture clinic Mon & Thu</p></div>
+    <div class="opd-item"><h5>Ophthalmology OPD</h5><p>Mon–Sat | 9AM–1PM | Cataract screening Mon</p></div>
+    <div class="opd-item"><h5>ENT OPD</h5><p>Mon–Sat | 9AM–1PM | Audiology clinic Wed</p></div>
+    <div class="opd-item"><h5>Dermatology OPD</h5><p>Mon–Sat | 9AM–12PM</p></div>
+    <div class="opd-item"><h5>Psychiatry OPD</h5><p>Mon–Sat | 10AM–1PM | De-addiction: Mon & Thu</p></div>
+  </div>
+  <p style="margin-top:16px;color:var(--muted);font-size:14px;">All OPD consultations are available at affordable charges. BPL cardholders and government scheme beneficiaries eligible for subsidized rates.</p>
+</div>
+<div class="content-card" id="emergency">
+  <h2><i class="ti ti-urgent"></i> Emergency Services (24×7)</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+    <div>
+      <p>Sanskriti Chikitsalaya's Emergency Department is operational round the clock with 30 dedicated beds including ICU-level care. The department is equipped to handle medical, surgical, obstetric, paediatric, and trauma emergencies.</p>
+      <div class="service-card" style="margin-bottom:10px;"><i class="ti ti-heartbeat"></i><div><h4>Resuscitation Bay</h4><p>2-bed resuscitation area with crash cart, defibrillator, ventilator, and central monitoring</p></div></div>
+      <div class="service-card" style="margin-bottom:10px;"><i class="ti ti-bone-off"></i><div><h4>Trauma Bay</h4><p>Dedicated trauma management area for road accident victims and polytrauma cases</p></div></div>
+      <div class="service-card"><i class="ti ti-baby"></i><div><h4>Obstetric Emergency</h4><p>24-hour obstetric emergency with dedicated O&G staff and neonatal support</p></div></div>
+    </div>
+    <div>
+      <div class="info-box" style="height:100%;"><h4>Emergency Contacts</h4>
+        <div style="margin:10px 0;"><strong style="display:block;font-family:Montserrat,sans-serif;font-size:13px;">Emergency Helpline</strong><span style="color:var(--red);font-size:20px;font-weight:700;font-family:Montserrat,sans-serif;">+91-565-228-9999</span></div>
+        <div style="margin:10px 0;"><strong style="display:block;font-family:Montserrat,sans-serif;font-size:13px;">Ambulance</strong><span style="color:var(--indigo);font-size:18px;font-weight:700;font-family:Montserrat,sans-serif;">+91-565-228-9998</span></div>
+        <div style="margin:10px 0;"><strong style="display:block;font-family:Montserrat,sans-serif;font-size:13px;">Blood Bank Emergency</strong><span style="color:var(--indigo);font-size:18px;font-weight:700;font-family:Montserrat,sans-serif;">+91-565-228-9997</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--muted);">Senior Resident on duty 24/7. Consultant on-call available for all specialties.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content-card" id="icu">
+  <h2><i class="ti ti-heartbeat"></i> ICU / HDU Services</h2>
+  <div class="feature-grid">
+    <div class="feature-box"><i class="ti ti-heart-rate-monitor"></i><h4>Medical ICU (MICU)</h4><p>Multi-parameter monitoring, ventilators, infusion pumps. Managed by critical care specialists 24/7.</p></div>
+    <div class="feature-box"><i class="ti ti-scalpel"></i><h4>Surgical ICU (SICU)</h4><p>Post-operative intensive care with trained ICU nurses and surgical residents in constant attendance.</p></div>
+    <div class="feature-box"><i class="ti ti-baby"></i><h4>Baby ICU (BICU / NICU)</h4><p>Neonatal and paediatric intensive care with incubators, phototherapy units, and neonatal ventilators.</p></div>
+    <div class="feature-box"><i class="ti ti-urgent"></i><h4>Emergency HDU</h4><p>High Dependency Unit adjacent to Emergency for step-down ICU care and close monitoring.</p></div>
+    <div class="feature-box"><i class="ti ti-activity"></i><h4>Monitoring & Equipment</h4><p>Central nurses station with multi-bed monitoring. Latest generation ventilators, CRRT machines, and cardiac monitors.</p></div>
+    <div class="feature-box"><i class="ti ti-users"></i><h4>ICU Team</h4><p>Dedicated intensivists, ICU-trained nurses, respiratory therapists, and round-the-clock pharmacist support.</p></div>
+  </div>
+</div>
+<div class="content-card" id="ot">
+  <h2><i class="ti ti-scalpel"></i> Operation Theatres</h2>
+  <p>Sanskriti Chikitsalaya has 5 fully equipped, modular, positive-pressure laminar-flow Operation Theatres designed for all major surgical disciplines.</p>
+  <div class="info-grid">
+    <div class="info-box"><h4>General Surgery OT (×2)</h4><ul><li>Laparoscopic tower (4K)</li><li>Major open surgery capability</li><li>Harmonic scalpel, LigaSure</li></ul></div>
+    <div class="info-box red"><h4>Orthopaedic OT</h4><ul><li>Image intensifier (C-arm)</li><li>Arthroscopy tower</li><li>Fracture fixation instruments</li></ul></div>
+    <div class="info-box gold"><h4>Obstetric OT</h4><ul><li>Dedicated LSCS theatre</li><li>Neonatal resuscitation trolley</li><li>Adjacent to labour room</li></ul></div>
+    <div class="info-box green"><h4>Minor OT / Speciality OT</h4><ul><li>ENT, Ophthalmology, Dermatology</li><li>Eye microscope, ENT endoscopy</li><li>Cataract phaco machine</li></ul></div>
+  </div>
+</div>
+<div class="content-card" id="diagnostics">
+  <h2><i class="ti ti-test-pipe"></i> Diagnostics Services</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+    <div class="service-card"><i class="ti ti-droplet"></i><div><h4>Clinical Pathology & Haematology</h4><p>Complete blood counts, coagulation studies, peripheral smear, bone marrow biopsy, urinalysis.</p></div></div>
+    <div class="service-card"><i class="ti ti-flask"></i><div><h4>Biochemistry</h4><p>Liver function, kidney function, lipid profile, thyroid function, blood glucose, cardiac enzymes.</p></div></div>
+    <div class="service-card"><i class="ti ti-microscope"></i><div><h4>Microbiology</h4><p>Culture & sensitivity, TB diagnostics (CBNAAT), serology, viral markers, rapid diagnostic tests.</p></div></div>
+    <div class="service-card"><i class="ti ti-virus"></i><div><h4>Histopathology / Cytology</h4><p>Biopsy processing, FNAC, frozen section, PAP smear, and immunohistochemistry.</p></div></div>
+    <div class="service-card"><i class="ti ti-radiology"></i><div><h4>Radiology & Imaging</h4><p>Digital X-ray, Ultrasound, Colour Doppler, CT Scan. Teleradiology support. 24/7 emergency imaging.</p></div></div>
+    <div class="service-card"><i class="ti ti-heart-rate-monitor"></i><div><h4>Cardiology Investigations</h4><p>ECG, 2D Echocardiography, Holter monitoring, TMT (Stress test) available on request.</p></div></div>
+  </div>
+</div>
+<div class="content-card" id="pharmacy">
+  <h2><i class="ti ti-pill"></i> Pharmacy Services</h2>
+  <p>Sanskriti Chikitsalaya operates a round-the-clock in-house pharmacy stocked with essential medicines, critical care drugs, surgical consumables, and orphan drugs. The pharmacy is managed by qualified pharmacists.</p>
+  <div class="info-grid">
+    <div class="info-box"><h4>24/7 Operation</h4><p>Inpatient pharmacy operational round the clock. Night pharmacy counter for emergency medication dispensing.</p></div>
+    <div class="info-box red"><h4>Drug Formulary</h4><p>National Essential Medicines List (NLEM) drugs available. Generic medicines provided to eligible patients at subsidized rates.</p></div>
+  </div>
+</div>
+<div class="content-card" id="blood-bank">
+  <h2><i class="ti ti-droplet-half-2"></i> Blood Bank</h2>
+  <p>The Blood Bank at Sanskriti Chikitsalaya is licensed by NACO (National AIDS Control Organisation) and equipped for whole blood collection, component separation, storage, and crossmatching.</p>
+  <div class="feature-grid">
+    <div class="feature-box"><i class="ti ti-droplet"></i><h4>Component Separation</h4><p>Packed RBCs, Platelets, FFP, and Cryoprecipitate available from donated whole blood.</p></div>
+    <div class="feature-box"><i class="ti ti-certificate"></i><h4>NACO Licensed</h4><p>Fully compliant with NBTC guidelines and NABH blood bank standards. Regular internal audits.</p></div>
+    <div class="feature-box"><i class="ti ti-clock-24"></i><h4>24/7 Availability</h4><p>Emergency blood issue 24 hours. Crossmatch TAT under 45 minutes for emergency requests.</p></div>
+  </div>
+</div>
+<div class="content-card" id="ambulance">
+  <h2><i class="ti ti-ambulance"></i> Ambulance Services</h2>
+  <p>Sanskriti Chikitsalaya operates Advanced Life Support (ALS) ambulances for emergency patient transport and inter-facility transfer. Staffed by trained paramedics.</p>
+  <div class="info-box" style="max-width:400px;"><h4>Ambulance Helpline</h4><p style="font-size:24px;font-weight:800;font-family:Montserrat,sans-serif;color:var(--red);">+91-565-228-9998</p><p>Available 24×7. GPS-tracked fleet. ALS and BLS ambulances available.</p></div>
+</div>
+<div class="content-card" id="patient-facilities">
+  <h2><i class="ti ti-users"></i> Patient & Attendant Facilities</h2>
+  <div class="feature-grid">
+    <div class="feature-box"><i class="ti ti-coffee"></i><h4>Cafeteria</h4><p>Subsidized canteen for patients and attendants. Hygienic, fresh food available from 7AM to 9PM daily.</p></div>
+    <div class="feature-box"><i class="ti ti-accessible"></i><h4>Wheelchair & Ramp</h4><p>Wheelchairs available at entrance. Ramps, lifts, and disability-friendly infrastructure throughout.</p></div>
+    <div class="feature-box"><i class="ti ti-heart-handshake"></i><h4>Social Work Cell</h4><p>Medical social workers for financial aid, government scheme enrollment (Ayushman Bharat), and patient counseling.</p></div>
+    <div class="feature-box"><i class="ti ti-parking"></i><h4>Parking</h4><p>Dedicated car and two-wheeler parking for patients and attendants. Free for emergency cases.</p></div>
+    <div class="feature-box"><i class="ti ti-currency-rupee"></i><h4>Billing & Insurance</h4><p>Cashless facility for Ayushman Bharat (PMJAY), CGHS, and empanelled insurance. Transparent billing.</p></div>
+    <div class="feature-box"><i class="ti ti-phone-call"></i><h4>Patient Helpdesk</h4><p>Dedicated helpdesk at entrance for OPD guidance, registration, and query resolution.</p></div>
+  </div>
+</div>
+</main>
+</div></div>
+<footer>
+  <div class="footer-top"><div class="wrapper"><div class="footer-grid">
+    <div class="footer-about"><div class="footer-logo"><img src="assets/img/logo.jpeg" alt="Sanskriti Santosh Medical College Logo"></div><p>Sanskriti Chikitsalaya — 464-bed multi-speciality teaching hospital. NH-19, Chhata, Mathura, UP 281401. Emergency: +91-565-228-9999</p><div class="footer-socials"><a href="#"><i class="ti ti-brand-facebook"></i></a><a href="#"><i class="ti ti-brand-instagram"></i></a><a href="#"><i class="ti ti-brand-youtube"></i></a></div></div>
+    <div><div class="footer-heading">Hospital Services</div><ul class="footer-links"><li><a href="#opd"><i class="ti ti-chevron-right"></i> OPD Services</a></li><li><a href="#emergency"><i class="ti ti-chevron-right"></i> Emergency</a></li><li><a href="#icu"><i class="ti ti-chevron-right"></i> ICU / HDU</a></li><li><a href="#ot"><i class="ti ti-chevron-right"></i> Operation Theatres</a></li><li><a href="#diagnostics"><i class="ti ti-chevron-right"></i> Diagnostics</a></li></ul></div>
+    <div><div class="footer-heading">Quick Links</div><ul class="footer-links"><li><a href="index.html"><i class="ti ti-chevron-right"></i> Home</a></li><li><a href="admissions.html"><i class="ti ti-chevron-right"></i> Admissions</a></li><li><a href="academics.html"><i class="ti ti-chevron-right"></i> Academics</a></li><li><a href="statutory.html"><i class="ti ti-chevron-right"></i> Statutory</a></li></ul></div>
+    <div><div class="footer-heading">Contact</div><div class="footer-contact-item"><i class="ti ti-phone"></i><div><strong>Emergency</strong>+91-565-228-9999</div></div><div class="footer-contact-item"><i class="ti ti-ambulance"></i><div><strong>Ambulance</strong>+91-565-228-9998</div></div><div class="footer-contact-item"><i class="ti ti-map-pin"></i><div><strong>Address</strong>NH-19, Chhata, Mathura, UP 281401</div></div></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="wrapper"><div class="footer-bottom-inner"><p>© 2026 Sanskriti Santosh Medical College & Research Centre. All Rights Reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="statutory.html">Statutory</a></div></div></div></div>
+</footer>
+<a href="#" class="back-to-top-btn"><i class="ti ti-arrow-up"></i></a>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

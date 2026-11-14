@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sanskriti Santosh Medical College & Research Centre | NH-19, Chhata, Mathura</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Noto+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<style>
+:root{
+  --primary:#1A243F;
+  --navy:#232d7e;
+  --indigo:#313a89;
+  --red:#e0181e;
+  --darkred:#bf1018;
+  --gold:#c79a45;
+  --lightgold:#e2b869;
+  --white:#fff;
+  --offwhite:#f7f8fc;
+  --border:#e6e6e6;
+  --text:#1a1a2e;
+  --muted:#5a5a6e;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans",sans-serif;color:var(--text);font-size:16px;overflow-x:hidden;}
+a{text-decoration:none;transition:.3s;}
+img{max-width:100%;}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:#c2c2c2;border-radius:99px;}
+
+/* ─── HELPERS ─── */
+.wrapper{max-width:1280px;width:100%;margin:0 auto;padding:0 30px;}
+.section-tag{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:4px;color:var(--red);font-family:"Montserrat",sans-serif;display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.section-tag::before{content:'';width:40px;height:2px;background:var(--red);}
+.section-heading{font-family:"Montserrat",sans-serif;font-size:38px;font-weight:700;line-height:1.2;color:var(--primary);}
+.section-heading.white{color:#fff;}
+.section-sub{font-size:16px;color:var(--muted);margin-top:12px;line-height:1.7;}
+.section-sub.white{color:rgba(255,255,255,.75);}
+.btn-primary-red{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;padding:13px 30px;border-radius:8px;font-family:"Montserrat",sans-serif;font-weight:600;font-size:14px;letter-spacing:.5px;transition:.3s;border:none;cursor:pointer;}
+.btn-primary-red:hover{background:var(--darkred);color:#fff;gap:16px;}
+.btn-outline-white{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;padding:12px 28px;border-radius:8px;font-family:"Montserrat",sans-serif;font-weight:600;font-size:14px;letter-spacing:.5px;transition:.3s;border:2px solid rgba(255,255,255,.5);}
+.btn-outline-white:hover{background:rgba(255,255,255,.15);color:#fff;border-color:#fff;}
+.btn-text{display:inline-flex;align-items:center;gap:8px;color:var(--indigo);font-weight:600;font-size:14px;font-family:"Montserrat",sans-serif;transition:.3s;}
+.btn-text:hover{gap:14px;color:var(--red);}
+.btn-text.white{color:#fff;}
+.btn-text.white:hover{color:var(--lightgold);}
+.back-to-top{position:fixed;bottom:28px;right:28px;width:50px;height:50px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;z-index:99;opacity:0;transition:.4s;pointer-events:none;}
+.back-to-top.show{opacity:1;pointer-events:all;}
+
+/* ─── NOTICE BAR ─── */
+.notice-bar{background:var(--primary);padding:6px 0;overflow:hidden;}
+.notice-inner{display:flex;align-items:center;gap:0;white-space:nowrap;}
+.notice-label{background:var(--red);color:#fff;font-size:11px;font-weight:700;font-family:"Montserrat",sans-serif;letter-spacing:2px;padding:4px 14px;text-transform:uppercase;flex-shrink:0;margin-right:20px;}
+.notice-scroll{overflow:hidden;flex:1;}
+.notice-track{display:inline-flex;gap:60px;animation:scrollNotice 35s linear infinite;}
+.notice-track span{color:rgba(255,255,255,.85);font-size:13px;}
+.notice-track span a{color:var(--lightgold);margin-left:6px;}
+@keyframes scrollNotice{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ─── HEADER ─── */
+.header-top{background:rgba(26,36,63,.92);backdrop-filter:blur(10px);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.header-top-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.contact-links{display:flex;align-items:center;gap:24px;}
+.contact-links a{color:rgba(255,255,255,.8);font-size:13px;display:flex;align-items:center;gap:8px;}
+.contact-links a:hover{color:#fff;}
+.contact-links i{font-size:16px;color:var(--gold);}
+.social-links{display:flex;align-items:center;gap:14px;}
+.social-links a{width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:15px;}
+.social-links a:hover{background:var(--red);border-color:var(--red);color:#fff;}
+.admission-cta-small{background:var(--red);color:#fff;font-size:12px;font-family:"Montserrat",sans-serif;font-weight:700;letter-spacing:1px;padding:5px 16px;border-radius:5px;text-transform:uppercase;}
+.admission-cta-small:hover{background:var(--darkred);color:#fff;}
+
+.header-main{position:absolute;top:0;left:0;width:100%;z-index:100;}
+.header-bottom{padding:14px 100px;display:flex;align-items:center;justify-content:space-between;gap:20px;transition:.4s;}
+.logo-wrap img{    height: 115px;
+    transition: .4s;
+    border-radius: 4px;}
+nav ul{list-style:none;display:flex;align-items:center;gap:4px;    margin: 0;}
+nav ul li{position:relative;}
+nav ul li > a{color:#fff;font-size:13px;font-weight:600;font-family:"Montserrat",sans-serif;text-transform:uppercase;letter-spacing:.5px;padding:10px 14px;border-radius:6px;display:flex;align-items:center;gap:5px;transition:.3s;}
+nav ul li > a:hover,nav ul li > a.active{background:rgba(255,255,255,.12);color:var(--lightgold);}
+nav ul li > a i{font-size:14px;transition:.3s;}
+nav ul li:hover > a i{transform:rotate(180deg);}
+
+.dropdown{position:absolute;top:calc(100% + 8px);left:0;background:#fff;min-width:220px;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.18);opacity:0;visibility:hidden;transform:translateY(12px);transition:.3s;z-index:200;padding:8px 0;border-top:3px solid var(--red);flex-wrap: wrap;}
+nav ul li:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown li > a{color:var(--text)!important;font-size:13px!important;font-weight:500!important;text-transform:none!important;letter-spacing:0!important;padding:9px 20px!important;background:transparent!important;border-radius:0!important;white-space:nowrap;}
+.dropdown li > a:hover{background:var(--offwhite)!important;color:var(--indigo)!important;}
+.dropdown.dropdown-wide{min-width:280px;}
+
+.header-bottom.fixed{position: fixed;
+    top: 0;
+    background: var(--primary);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .25);
+    padding: 10px 120px;
+    width: 100%;}
+.header-bottom.fixed .logo-wrap img{height:50px;}
+
+/* ─── HERO BANNER ─── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;}
+.hero-video-bg{position:absolute;inset:0;z-index:0;}
+.hero-video-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,36,63,.88) 0%,rgba(35,45,126,.7) 50%,rgba(26,36,63,.6) 100%);}
+.hero-gradient-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0f1729 0%,#1A243F 30%,#232d7e 65%,#313a89 100%);z-index:0;}
+.hero-pattern{position:absolute;inset:0;z-index:1;background-image:radial-gradient(circle at 20% 50%,rgba(199,154,69,.08) 0%,transparent 60%),radial-gradient(circle at 80% 20%,rgba(49,58,137,.4) 0%,transparent 50%),url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hero-content{position:relative;z-index:2;padding:180px 30px 100px;max-width:1280px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;}
+.hero-left{padding-bottom:20px;}
+.hero-eyebrow{font-family:"Montserrat",sans-serif;font-size:12px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.hero-eyebrow::before{content:'';width:30px;height:2px;background:var(--gold);}
+.hero-title{font-family:"Playfair Display",serif;font-size:62px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:10px;}
+.hero-title em{font-style:italic;color:var(--lightgold);}
+.hero-subtitle{font-family:"Montserrat",sans-serif;font-size:17px;font-weight:600;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;}
+.hero-desc{color:rgba(255,255,255,.78);font-size:16px;line-height:1.8;margin-bottom:36px;max-width:500px;}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.hero-right{display:flex;flex-direction:column;gap:16px;padding-bottom:20px;}
+.hero-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.hero-stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(10px);border-radius:12px;padding:20px 22px;}
+.hero-stat-num{font-family:"Montserrat",sans-serif;font-size:36px;font-weight:800;color:#fff;line-height:1;}
+.hero-stat-num span{color:var(--gold);}
+.hero-stat-label{font-size:12px;color:rgba(255,255,255,.65);margin-top:6px;text-transform:uppercase;letter-spacing:1px;}
+.hero-badge{background:linear-gradient(135deg,rgba(224,24,30,.9),rgba(191,16,24,.9));border-radius:12px;padding:20px 22px;display:flex;align-items:center;gap:16px;}
+.hero-badge i{font-size:36px;color:#fff;flex-shrink:0;}
+.hero-badge-text{color:#fff;}
+.hero-badge-text strong{font-family:"Montserrat",sans-serif;font-size:14px;font-weight:700;display:block;margin-bottom:4px;}
+.hero-badge-text span{font-size:12px;opacity:.8;}
+.hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:11px;letter-spacing:2px;text-transform:uppercase;}
+.scroll-line{width:1px;height:40px;background:linear-gradient(rgba(255,255,255,.5),transparent);animation:scrollDown 1.5s ease-in-out infinite;}
+@keyframes scrollDown{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}100%{transform:scaleY(0);transform-origin:bottom;}}
+
+/* ─── QUICK CARDS ─── */
+.quick-cards{position:relative;margin-top:-70px;z-index:10;padding:0 30px;max-width:1280px;margin-left:auto;margin-right:auto;}
+.quick-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.18);}
+.qc-item{padding:30px 32px;display:flex;align-items:flex-start;gap:18px;transition:.3s;position:relative;cursor:default;}
+.qc-item:nth-child(1){background:#fff3bf;}
+.qc-item:nth-child(2){background:#fed0f8;}
+.qc-item:nth-child(3){background:#ccfff9;}
+.qc-item:hover{filter:brightness(.96);}
+.qc-icon{font-size:44px;color:#333;flex-shrink:0;line-height:1;}
+.qc-body h3{font-family:"Montserrat",sans-serif;font-size:17px;font-weight:700;color:#1a1a2e;margin-bottom:8px;}
+.qc-body p{font-size:14px;color:#444;margin:0;line-height:1.6;}
+.qc-body a{font-size:13px;font-weight:600;color:#232d7e;display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-family:"Montserrat",sans-serif;}
+.qc-body a:hover{gap:10px;color:var(--red);}
+
+/* ─── ABOUT ─── */
+.about-section{padding:100px 0;background:#fff;}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+.about-imgs{position:relative;display:grid;grid-template-columns:1fr 2fr;gap:16px;}
+.about-img-tall{padding-top:80px;}
+.about-img-tall img,.about-img-main img{width:100%;height:100%;object-fit:cover;border-radius:14px;}
+.about-img-tall img{height:500px;}
+.about-img-main img{height:420px;}
+.about-badge{position:absolute;bottom:30px;left:-20px;background:var(--red);color:#fff;border-radius:12px;padding:18px 22px;box-shadow:0 10px 30px rgba(224,24,30,.3);}
+.about-badge strong{font-family:"Montserrat",sans-serif;font-size:36px;font-weight:800;display:block;line-height:1;}
+.about-badge span{font-size:12px;opacity:.9;text-transform:uppercase;letter-spacing:1px;}
+.about-content{padding-right:20px;}
+.about-content p{color:var(--muted);line-height:1.8;margin-bottom:16px;}
+.about-list{list-style:none;margin:20px 0;}
+.about-list li{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:15px;color:var(--text);}
+.about-list li i{color:var(--red);font-size:18px;flex-shrink:0;margin-top:1px;}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;}
+.af-item{display:flex;align-items:flex-start;gap:12px;}
+.af-icon{width:44px;height:44px;border-radius:10px;background:var(--indigo);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.af-icon i{color:#fff;font-size:22px;}
+.af-text h4{font-family:"Montserrat",sans-serif;font-size:14px;font-weight:700;margin-bottom:3px;color:var(--primary);}
+.af-text p{font-size:13px;color:var(--muted);margin:0;line-height:1.5;}
+
+/* ─── PROGRAMS ─── */
+.programs-section{padding:100px 0;background:var(--indigo);position:relative;overflow:hidden;}
+.programs-section::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpolygon points='40 0 80 40 40 80 0 40'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat;background-attachment:fixed;}
+.programs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px;}
+.prog-card{background:#fff;border-radius:14px;padding:32px 28px;transition:.4s;position:relative;overflow:hidden;}
+.prog-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--red);transition:.4s;}
+.prog-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.15);}
+.prog-card:hover::after{width:100%;}
+.prog-icon{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--offwhite),#e8eaf6);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.prog-icon i{font-size:36px;color:var(--indigo);}
+.prog-card h3{font-family:"Montserrat",sans-serif;font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;}
+.prog-card p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:20px;}
+.prog-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;font-family:"Montserrat",sans-serif;letter-spacing:1px;color:var(--indigo);background:#e8eaf6;padding:5px 12px;border-radius:20px;}
+
+/* ─── DEPARTMENTS ─── */
+.depts-section{padding:100px 0;background:var(--primary);position:relative;overflow:hidden;}
+.depts-section::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#0f1729 0%,#1A243F 50%,#232d7e 100%);}
+.depts-inner{position:relative;z-index:1;}
+.dept-tabs{display:flex;gap:10px;justify-content:center;margin:40px 0;}
+.dept-tab{padding:10px 24px;border:none;border-radius:8px;font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:.3s;letter-spacing:.5px;}
+.dept-tab.pre{background:#f7db61;color:#333;}
+.dept-tab.para{background:#ed87e0;color:#333;}
+.dept-tab.cli{background:#69bdb3;color:#333;}
+.dept-tab.active,.dept-tab:hover{filter:brightness(1.1);transform:translateY(-2px);}
+.dept-panel{display:none;animation:fadeIn .3s ease;}
+.dept-panel.active{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.dept-card{text-align:center;padding:24px 16px;border-radius:10px;transition:.3s;cursor:default;}
+.dept-card.pre-style{border:2px solid #f7db61;}
+.dept-card.para-style{border:2px solid #ed87e0;}
+.dept-card.cli-style{border:2px solid #69bdb3;}
+.dept-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.05);}
+.dept-icon{height:50px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.dept-icon i{font-size:42px;color:#fff;}
+.dept-card p{color:#fff;font-family:"Montserrat",sans-serif;font-size:13px;font-weight:600;margin:0;}
+
+/* ─── HOSPITAL STATS ─── */
+.stats-section{padding:80px 0;background:linear-gradient(135deg,#fff 0%,#f0f2ff 100%);}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px;border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(35,45,126,.1);border:1px solid rgba(35,45,126,.1);}
+.stat-item{padding:40px 30px;text-align:center;position:relative;transition:.3s;}
+.stat-item:not(:last-child){border-right:1px solid rgba(35,45,126,.1);}
+.stat-item:hover{background:#fff;box-shadow:0 0 0 2px var(--indigo) inset;}
+.stat-num{font-family:"Montserrat",sans-serif;font-size:52px;font-weight:800;color:var(--indigo);line-height:1;}
+.stat-num span{color:var(--red);}
+.stat-label{font-size:14px;color:var(--muted);margin-top:8px;text-transform:uppercase;letter-spacing:1px;font-family:"Montserrat",sans-serif;font-weight:600;}
+.stat-icon{font-size:28px;color:var(--gold);margin-bottom:12px;}
+
+/* ─── HOSPITAL OVERVIEW ─── */
+.hospital-section{padding:100px 0;background:#fff;}
+.hosp-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+.hosp-img-wrap{position:relative;}
+.hosp-img-wrap img{width:100%;height:520px;object-fit:cover;border-radius:16px;}
+.hosp-float{position:absolute;bottom:-20px;right:-20px;background:var(--primary);border-radius:14px;padding:24px 28px;color:#fff;box-shadow:0 15px 40px rgba(26,36,63,.35);}
+.hosp-float strong{font-family:"Montserrat",sans-serif;font-size:28px;font-weight:800;display:block;color:var(--gold);}
+.hosp-float span{font-size:13px;opacity:.8;}
+.hosp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;}
+.hosp-item{display:flex;align-items:flex-start;gap:12px;padding:16px;background:var(--offwhite);border-radius:10px;}
+.hosp-item i{font-size:24px;color:var(--indigo);flex-shrink:0;margin-top:2px;}
+.hosp-item h4{font-family:"Montserrat",sans-serif;font-size:14px;font-weight:700;color:var(--primary);margin-bottom:3px;}
+.hosp-item p{font-size:13px;color:var(--muted);margin:0;}
+
+/* ─── BED DISTRIBUTION ─── */
+.beds-section{padding:80px 0;background:var(--offwhite);}
+.beds-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:50px;}
+.beds-table-wrap{overflow-x:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.08);}
+.beds-table{width:100%;border-collapse:collapse;background:#fff;}
+.beds-table th{background:var(--primary);color:#fff;padding:12px 16px;font-family:"Montserrat",sans-serif;font-size:12px;font-weight:700;text-align:center;text-transform:uppercase;letter-spacing:.5px;}
+.beds-table th:first-child{text-align:left;}
+.beds-table td{padding:11px 16px;font-size:14px;border-bottom:1px solid var(--border);text-align:center;}
+.beds-table td:nth-child(2){text-align:left;}
+.beds-table tr:last-child td{border-bottom:none;}
+.beds-table tr:hover td{background:#f5f7ff;}
+.beds-table tfoot td{background:var(--primary);color:#fff;font-weight:700;font-family:"Montserrat",sans-serif;}
+.beds-summary{display:flex;flex-direction:column;gap:16px;}
+.beds-sum-card{background:#fff;border-radius:12px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-left:4px solid var(--indigo);}
+.beds-sum-card.motorized{border-color:var(--gold);}
+.beds-sum-card.normal{border-color:var(--red);}
+.beds-sum-card.teaching{border-color:#69bdb3;}
+.beds-sum-num{font-family:"Montserrat",sans-serif;font-size:48px;font-weight:800;color:var(--primary);}
+.beds-sum-text strong{font-family:"Montserrat",sans-serif;font-size:15px;font-weight:700;color:var(--primary);display:block;}
+.beds-sum-text span{font-size:13px;color:var(--muted);}
+.beds-note{background:#fff8dc;border-radius:10px;padding:16px 20px;font-size:13px;color:#664d00;border-left:4px solid var(--gold);margin-top:10px;line-height:1.7;}
+
+/* ─── ACADEMICS ─── */
+.academics-section{padding:100px 0;background:linear-gradient(180deg,#c9d4ff 0%,#fff 100%);position:relative;}
+.academics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px;}
+.acad-card{background:#fff;border-radius:14px;padding:30px;box-shadow:0 4px 20px rgba(35,45,126,.08);transition:.3s;border-top:4px solid transparent;}
+.acad-card:hover{transform:translateY(-6px);border-top-color:var(--indigo);}
+.acad-card h3{font-family:"Montserrat",sans-serif;font-size:17px;font-weight:700;color:var(--primary);margin:16px 0 10px;}
+.acad-card p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.acad-badge{display:inline-block;background:#e8eaf6;color:var(--indigo);font-size:11px;font-weight:700;font-family:"Montserrat",sans-serif;letter-spacing:1px;padding:4px 12px;border-radius:20px;text-transform:uppercase;margin-bottom:14px;}
+
+/* ─── EVENTS ─── */
+.events-section{padding:100px 0;background:#fff;}
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px;}
+.ev-card{border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:.3s;}
+.ev-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.15);}
+.ev-img{position:relative;overflow:hidden;}
+.ev-img img{width:100%;height:220px;object-fit:cover;transition:.4s;}
+.ev-card:hover .ev-img img{transform:scale(1.05);}
+.ev-date-badge{position:absolute;top:16px;left:16px;background:var(--red);color:#fff;border-radius:8px;padding:8px 14px;text-align:center;}
+.ev-date-badge strong{font-family:"Montserrat",sans-serif;font-size:20px;font-weight:800;display:block;line-height:1;}
+.ev-date-badge span{font-size:10px;text-transform:uppercase;letter-spacing:1px;}
+.ev-body{background:#fff;padding:20px 22px;margin:0 14px;margin-top:-20px;position:relative;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.08);}
+.ev-body h3{font-family:"Montserrat",sans-serif;font-size:16px;font-weight:700;color:var(--primary);margin-bottom:8px;}
+.ev-body h3 a{color:inherit;}
+.ev-body h3 a:hover{color:var(--indigo);}
+.ev-meta{font-size:12px;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.ev-body p{font-size:13px;color:var(--muted);line-height:1.6;margin:0;}
+
+/* ─── NEWS ─── */
+.news-section{padding:100px 0;background:var(--offwhite);}
+.news-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-top:50px;}
+.news-featured{grid-row:span 2;}
+.news-featured .news-img img{height:320px;}
+.news-img img{width:100%;height:160px;object-fit:cover;border-radius:10px;transition:.3s;}
+.news-item:hover .news-img img{transform:scale(1.03);}
+.news-img{overflow:hidden;border-radius:10px;}
+.news-item{display:flex;flex-direction:column;}
+.news-meta{display:flex;align-items:center;gap:12px;margin:12px 0 8px;font-size:12px;font-family:"Montserrat",sans-serif;font-weight:600;}
+.news-cat{color:var(--red);text-transform:uppercase;letter-spacing:1px;}
+.news-date{color:var(--muted);}
+.news-title a{font-family:"Montserrat",sans-serif;font-size:16px;font-weight:700;color:var(--primary);line-height:1.4;}
+.news-title a:hover{color:var(--indigo);}
+.news-featured .news-title a{font-size:22px;}
+.news-side-items{display:flex;flex-direction:column;gap:24px;}
+.news-side-item{display:grid;grid-template-columns:90px auto;gap:14px;align-items:start;}
+.news-side-item .news-img img{height:70px;width:90px;object-fit:cover;}
+.news-side-item .news-title a{font-size:13px;}
+
+/* ─── TESTIMONIALS ─── */
+.testi-section{padding:100px 0;background:#fff;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px;}
+.testi-card{background:#fff;border-radius:14px;padding:36px 30px;box-shadow:0 4px 25px rgba(0,0,0,.08);position:relative;transition:.3s;}
+.testi-card:hover{transform:translateY(-6px);}
+.testi-quote{position:absolute;top:-14px;left:28px;width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;}
+.testi-avatar{width:70px;height:70px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 16px;display:block;border:3px solid var(--border);}
+.testi-text{text-align:center;font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:20px;}
+.testi-name{text-align:center;font-family:"Montserrat",sans-serif;font-size:15px;font-weight:700;color:var(--primary);}
+.testi-role{text-align:center;font-size:13px;color:var(--muted);font-style:italic;}
+.testi-stars{text-align:center;color:var(--gold);font-size:14px;margin:8px 0 4px;}
+
+/* ─── ACCREDITATIONS ─── */
+.accred-section{padding:80px 0;background:linear-gradient(135deg,#e8eaf6,#fff4e1);}
+.accred-logos{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:50px;}
+.accred-item{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;}
+.accred-circle{width:90px;height:90px;border-radius:50%;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--indigo);transition:.3s;}
+.accred-circle:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(35,45,126,.2);}
+.accred-label{font-family:"Montserrat",sans-serif;font-size:12px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:1px;}
+
+/* ─── CONTACT STRIP ─── */
+.contact-strip{padding:70px 0;background:var(--primary);position:relative;overflow:hidden;}
+.contact-strip::before{content:'';position:absolute;right:-100px;top:-100px;width:400px;height:400px;border-radius:50%;background:rgba(49,58,137,.4);}
+.cs-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;position:relative;}
+.cs-left h2{font-family:"Montserrat",sans-serif;font-size:34px;font-weight:800;color:#fff;margin-bottom:8px;}
+.cs-left p{color:rgba(255,255,255,.7);font-size:16px;}
+.cs-actions{display:flex;gap:14px;align-items:center;}
+
+/* ─── FOOTER ─── */
+footer{background:var(--indigo);position:relative;overflow:hidden;}
+footer::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/svg%3E");background-attachment:fixed;}
+.footer-top{padding:70px 0 50px;position:relative;}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.8fr;gap:50px;}
+.footer-logo img{    height: 100px;
+    margin-bottom: 18px;
+    border-radius: 4px;}
+.footer-about p{color:rgba(255,255,255,.65);font-size:14px;line-height:1.8;margin-bottom:20px;}
+.footer-socials{display:flex;gap:10px;}
+.footer-socials a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:16px;transition:.3s;}
+.footer-socials a:hover{background:var(--red);border-color:var(--red);color:#fff;}
+.footer-heading{color:#fff;font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1);}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:10px;}
+.footer-links a{color:rgba(255,255,255,.65);font-size:14px;display:flex;align-items:center;gap:8px;transition:.3s;}
+.footer-links a:hover{color:var(--lightgold);padding-left:4px;}
+.footer-links a i{font-size:12px;color:var(--red);}
+.footer-contact-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;}
+.footer-contact-item i{font-size:18px;color:var(--gold);flex-shrink:0;margin-top:2px;}
+.footer-contact-item div{color:rgba(255,255,255,.7);font-size:14px;line-height:1.6;}
+.footer-contact-item div strong{color:#fff;display:block;font-family:"Montserrat",sans-serif;font-size:13px;font-weight:600;margin-bottom:2px;}
+.footer-bottom{background:rgba(0,0,0,.25);padding:18px 0;position:relative;}
+.footer-bottom-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.footer-bottom-inner p{color:rgba(255,255,255,.5);font-size:13px;margin:0;}
+.footer-bottom-links{display:flex;gap:20px;}
+.footer-bottom-links a{color:rgba(255,255,255,.5);font-size:13px;transition:.3s;}
+.footer-bottom-links a:hover{color:rgba(255,255,255,.9);}
+
+/* ─── ANNOUNCEMENT STRIP ─── */
+.announce-strip{background:var(--gold);padding:10px 0;overflow:hidden;}
+.announce-inner{display:flex;align-items:center;gap:0;white-space:nowrap;}
+.announce-label{background:var(--darkred);color:#fff;font-size:11px;font-weight:700;font-family:"Montserrat",sans-serif;letter-spacing:2px;padding:4px 14px;text-transform:uppercase;flex-shrink:0;margin-right:20px;}
+.announce-track{display:inline-flex;gap:60px;animation:scrollNotice 30s linear infinite;}
+.announce-track span{color:var(--primary);font-size:13px;font-weight:600;font-family:"Montserrat",sans-serif;}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1100px){
+  .hero-content{grid-template-columns:1fr;padding-top:160px;padding-bottom:80px;}
+  .hero-right{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;}
+  .hero-title{font-size:46px;}
+  .about-inner,.hosp-inner,.beds-inner{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .news-grid{grid-template-columns:1fr 1fr;}
+  .news-featured{grid-row:auto;}
+}
+@media(max-width:900px){
+  .quick-cards-grid{grid-template-columns:1fr;}
+  .programs-grid,.academics-grid,.events-grid,.testi-grid{grid-template-columns:1fr 1fr;}
+  .dept-panel.active{grid-template-columns:repeat(3,1fr);}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .stats-grid .stat-item{border-right:none;border-bottom:1px solid rgba(35,45,126,.1);}
+  .about-features{grid-template-columns:1fr;}
+  .hosp-grid{grid-template-columns:1fr;}
+  nav{display:none;}
+}
+@media(max-width:600px){
+  .hero-title{font-size:34px;}
+  .programs-grid,.academics-grid,.events-grid,.testi-grid,.dept-panel.active{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr;}
+  .news-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .cs-inner{grid-template-columns:1fr;}
+  .accred-logos{gap:20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NOTICE BAR -->
+<div class="notice-bar">
+  <div class="wrapper">
+    <div class="notice-inner">
+      <div class="notice-label">Notice</div>
+      <div class="notice-scroll">
+        <div class="notice-track" id="noticeTrack">
+          <span>MBBS Admissions 2026 Open — NEET Score Required <a href="admissions.html">Apply Now →</a></span>
+          <span>NMC Approved | Affiliated to Uttar Pradesh University of Medical Sciences (UPUMS)</span>
+          <span>464 Teaching Beds | 128 Motorized Beds | 13 Departments</span>
+          <span>28 K. M. Stone, Mathura - Delhi Highway, Mathura (U.P.), (INDIA)</span>
+          <span>MBBS Admissions 2026 Open — NEET Score Required <a href="admissions.html">Apply Now →</a></span>
+          <span>NMC Approved | Affiliated to Uttar Pradesh University of Medical Sciences (UPUMS)</span>
+          <span>464 Teaching Beds | 128 Motorized Beds | 13 Departments</span>
+          <span>28 K. M. Stone, Mathura - Delhi Highway, Mathura (U.P.), (INDIA)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header-main" id="mainHeader">
+  <div class="header-top">
+    <div class="wrapper">
+      <div class="header-top-inner">
+        <div class="contact-links">
+          <a href="mailto:info.ssmcrc@sanskriti.edu.in"><i class="ti ti-mail"></i> info.ssmcrc@sanskriti.edu.in</a>
+          <a href="tel:+915652280000"><i class="ti ti-phone"></i> +91-565-228-0000</a>
+          <a href="contact.html"><i class="ti ti-map-pin"></i> 28 K. M. Stone, Mathura - Delhi Highway, Mathura (U.P.), (INDIA)</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:20px;">
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+          </div>
+          <a href="admissions.html" class="admission-cta-small">Admissions 2026</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom" id="headerBottom">
+    <div class="logo-wrap">
+      <a href="index.html">
+        <img src="assets/img/logo.jpeg" alt="Sanskriti Santosh Medical College Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+
+        <!-- ABOUT US -->
+        <li>
+          <a href="about.html">About Us <i class="ti ti-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="about.html#overview">About Sanskriti Chikitsalaya</a></li>
+            <li><a href="about.html#vision">Vision &amp; Mission</a></li>
+            <li><a href="about.html#leadership">Leadership</a></li>
+            <li><a href="about.html#chairman-message">Chairman's Message</a></li>
+            <li><a href="about.html#dean-message">Dean's Message</a></li>
+            <li><a href="about.html#approvals">Approvals &amp; Recognition</a></li>
+            <li><a href="about.html#governance">Board of Management</a></li>
+          </ul>
+        </li>
+
+        <!-- ACADEMICS -->
+        <li>
+          <a href="academics.html">Academics <i class="ti ti-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="academics.html">MBBS Program</a></li>
+            <li><a href="academics.html#departments">Departments</a></li>
+            <li><a href="academics.html#calendar">Academic Calendar</a></li>
+            <li><a href="academics.html#faculty">Faculty Overview</a></li>
+            <li><a href="academics.html#teaching">Teaching Methodology</a></li>
+            <li><a href="academics.html#meu">Medical Education Unit</a></li>
+          </ul>
+        </li>
+
+        <!-- ADMISSIONS -->
+        <li>
+          <a href="admissions.html">Admissions <i class="ti ti-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="admissions.html">Admission Overview</a></li>
+            <li><a href="admissions.html#neet">NEET Requirement</a></li>
+            <li><a href="admissions.html#fees">Fee Structure</a></li>
+            <li><a href="admissions.html#process">Counseling Process</a></li>
+            <li><a href="admissions.html#nri">NRI / Management Quota</a></li>
+            <li><a href="admissions.html#dates">Important Dates</a></li>
+            <li><a href="admissions.html#form">Application Form</a></li>
+          </ul>
+        </li>
+
+        <!-- HOSPITAL -->
+        <li>
+          <a href="hospital.html">Hospital <i class="ti ti-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="hospital.html#beds">Bed Distribution</a></li>
+            <li><a href="hospital.html#opd">OPD Services</a></li>
+            <li><a href="hospital.html#ipd">IPD Services</a></li>
+            <li><a href="hospital.html#emergency">Emergency Services</a></li>
+            <li><a href="hospital.html#icu">ICU / HDU</a></li>
+            <li><a href="hospital.html#ot">Operation Theatres</a></li>
+            <li><a href="hospital.html#diagnostics">Diagnostics</a></li>
+          </ul>
+        </li>
+
+        <!-- INFRASTRUCTURE -->
+        <li>
+          <a href="infrastructure.html">Infrastructure <i class="ti ti-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="infrastructure.html">Campus Overview</a></li>
+            <li><a href="infrastructure.html#academic-block">Academic Block</a></li>
+            <li><a href="infrastructure.html#library">Central Library</a></li>
+            <li><a href="infrastructure.html#labs">Laboratories</a></li>
+            <li><a href="infrastructure.html#hostels">Hostels</a></li>
+            <li><a href="infrastructure.html#sports">Sports Facilities</a></li>
+          </ul>
+        </li>
+
+        <!-- RESEARCH -->
+        <li>
+          <a href="research.html">Research <i class="ti ti-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="research.html">Research Overview</a></li>
+            <li><a href="research.html#ethics">Ethics Committee</a></li>
+            <li><a href="research.html#publications">Publications</a></li>
+            <li><a href="research.html#conferences">Conferences</a></li>
+          </ul>
+        </li>
+
+        <!-- MEDIA -->
+        <li>
+          <a href="media.html">Media <i class="ti ti-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="media.html#news">News</a></li>
+            <li><a href="media.html#events">Events</a></li>
+            <li><a href="media.html#gallery">Photo Gallery</a></li>
+            <li><a href="media.html#press">Press Releases</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" style="font-size:18px;"><i class="ti ti-search"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO BANNER -->
+<section class="hero">
+  <div class="hero-gradient-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Faculty of Medicine</div>
+      <h1 class="hero-title">Sanskriti Santosh<br><em>Medical College</em></h1>
+      <div class="hero-subtitle">&amp; Research Centre</div>
+      <p class="hero-desc">A NMC-approved institution committed to producing compassionate, competent doctors through world-class clinical training, cutting-edge research, and a 464-bed teaching hospital in the heart of Mathura, Uttar Pradesh.</p>
+      <div class="hero-actions">
+        <a href="admissions.html" class="btn-primary-red">Apply for MBBS 2026 <i class="ti ti-arrow-narrow-right"></i></a>
+        <a href="infrastructure.html#virtual-tour" class="btn-outline-white">Take a Virtual Tour <i class="ti ti-video"></i></a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <div class="hero-stat-num">464<span>+</span></div>
+          <div class="hero-stat-label">Teaching Beds</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">13<span>+</span></div>
+          <div class="hero-stat-label">Clinical Depts</div>
+        </div>
+      </div>
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <div class="hero-stat-num">26<span></span></div>
+          <div class="hero-stat-label">Wards</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">84<span>+</span></div>
+          <div class="hero-stat-label">ICU Beds</div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <i class="ti ti-award"></i>
+        <div class="hero-badge-text">
+          <strong>NMC Approved Institution</strong>
+          <span>National Medical Commission, Govt. of India</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ANNOUNCEMENT STRIP -->
+<div class="announce-strip">
+  <div class="wrapper">
+    <div class="announce-inner">
+      <div class="announce-label">Admissions Open</div>
+      <div class="notice-scroll">
+        <div class="announce-track">
+          <span>MBBS 2026 — Apply Before Deadline &nbsp;|&nbsp;</span>
+          <span>NEET Score Mandatory &nbsp;|&nbsp;</span>
+          <span>Management Quota Seats Available &nbsp;|&nbsp;</span>
+          <span>NRI Quota Open &nbsp;|&nbsp;</span>
+          <span>Download Prospectus &nbsp;|&nbsp;</span>
+          <span>Helpline: +91-565-228-0001 &nbsp;|&nbsp;</span>
+          <span>MBBS 2026 — Apply Before Deadline &nbsp;|&nbsp;</span>
+          <span>NEET Score Mandatory &nbsp;|&nbsp;</span>
+          <span>Management Quota Seats Available &nbsp;|&nbsp;</span>
+          <span>NRI Quota Open &nbsp;|&nbsp;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK FEATURE CARDS -->
+<div class="quick-cards">
+  <div class="quick-cards-grid">
+    <div class="qc-item">
+      <i class="ti ti-microscope qc-icon"></i>
+      <div class="qc-body">
+        <h3>Research &amp; Development</h3>
+        <p>A culture focused on developing medical solutions through structured experimentations, ethics-board guided studies, and peer-reviewed publications.</p>
+        <a href="research.html">Explore Research <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+    </div>
+    <div class="qc-item">
+      <i class="ti ti-heart-rate-monitor qc-icon"></i>
+      <div class="qc-body">
+        <h3>464-Bed Teaching Hospital</h3>
+        <p>Sanskriti Chikitsalaya offers full-spectrum clinical training with 26 wards, 84 ICU beds, 44 HDU beds, and 5 Operation Theatres.</p>
+        <a href="hospital.html">Hospital Details <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+    </div>
+    <div class="qc-item">
+      <i class="ti ti-school qc-icon"></i>
+      <div class="qc-body">
+        <h3>NMC-Approved MBBS</h3>
+        <p>Our 5.5-year MBBS program follows the National Medical Commission curriculum with a dedicated Medical Education Unit and modern lecture theatres.</p>
+        <a href="academics.html">Academics <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+  <div class="wrapper">
+    <div class="about-inner">
+      <div class="about-imgs">
+        <div class="about-img-tall">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=300&h=500&fit=crop" alt="Medical College Campus">
+        </div>
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=500&h=420&fit=crop" alt="Sanskriti Santosh Medical College">
+        </div>
+        <div class="about-badge">
+          <strong>Est.</strong>
+          <span>Excellence</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-tag">About Us</div>
+        <h2 class="section-heading">Providing Quality Medical Education Since Foundation</h2>
+        <p style="margin-top:16px;">Sanskriti Santosh Medical College &amp; Research Centre is an institution of the Sanskriti Educational Trust, situated on 28 K. M. Stone, Mathura - Delhi Highway, Mathura (U.P.), (INDIA) — one of North India's most historically significant locations. We operate under Sanskriti Chikitsalaya, a fully equipped, 464-bed multi-speciality teaching hospital.</p>
+        <p>Our MBBS program is recognized by the National Medical Commission (NMC) and affiliated to Uttar Pradesh University of Medical Sciences (UPUMS). We offer an environment where academic rigour meets compassionate patient care.</p>
+        <ul class="about-list">
+          <li><i class="ti ti-check"></i> NMC-approved with UPUMS affiliation — Government-recognized program</li>
+          <li><i class="ti ti-check"></i> 13 clinical departments across Pre-Clinical, Para-Clinical, and Clinical streams</li>
+          <li><i class="ti ti-check"></i> Dedicated Medical Education Unit with modern simulation labs</li>
+          <li><i class="ti ti-check"></i> Anti-Ragging, Ethics, Grievance committees — safe campus for all</li>
+        </ul>
+        <div class="about-features">
+          <div class="af-item">
+            <div class="af-icon"><i class="ti ti-building-hospital"></i></div>
+            <div class="af-text"><h4>Peripheral Health Centres</h4><p>Community health training for holistic exposure</p></div>
+          </div>
+          <div class="af-item">
+            <div class="af-icon"><i class="ti ti-brain"></i></div>
+            <div class="af-text"><h4>Superspeciality Depts</h4><p>Neurosciences, Cardiology, CVTS &amp; more</p></div>
+          </div>
+          <div class="af-item">
+            <div class="af-icon"><i class="ti ti-users"></i></div>
+            <div class="af-text"><h4>Expert Faculty</h4><p>500+ doctors, professors &amp; medical experts</p></div>
+          </div>
+          <div class="af-item">
+            <div class="af-icon"><i class="ti ti-flask"></i></div>
+            <div class="af-text"><h4>50+ Laboratories</h4><p>Modern labs for hands-on learning</p></div>
+          </div>
+        </div>
+        <div style="margin-top:32px;">
+          <a href="about.html" class="btn-primary-red">Learn More About Us <i class="ti ti-arrow-narrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS SECTION -->
+<section class="programs-section" id="academics">
+  <div class="wrapper">
+    <div style="text-align:center;position:relative;">
+      <div class="section-tag" style="justify-content:center;">Academic Programs</div>
+      <h2 class="section-heading white">Excellence in Medical Education</h2>
+      <p class="section-sub white" style="max-width:600px;margin:0 auto;">Rigorous academic programs designed in line with the National Medical Commission's competency-based curriculum, ensuring graduates are industry-ready.</p>
+    </div>
+    <div class="programs-grid">
+      <div class="prog-card">
+        <div class="prog-icon"><i class="ti ti-stethoscope"></i></div>
+        <div class="prog-tag">UNDERGRADUATE</div>
+        <h3>MBBS Program</h3>
+        <p>A 5.5-year bachelor's degree in medicine and surgery, comprising 4.5 years of academic training + 1-year rotating internship across all clinical departments.</p>
+        <a href="academics.html" class="btn-text">Program Details <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+      <div class="prog-card">
+        <div class="prog-icon"><i class="ti ti-activity"></i></div>
+        <div class="prog-tag">CLINICAL</div>
+        <h3>Internship Program</h3>
+        <p>One year of mandatory rotating internship through all 13 clinical departments of Sanskriti Chikitsalaya, preparing graduates for independent clinical practice.</p>
+        <a href="academics.html#internship" class="btn-text">Learn More <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+      <div class="prog-card">
+        <div class="prog-icon"><i class="ti ti-microscope"></i></div>
+        <div class="prog-tag">RESEARCH</div>
+        <h3>Medical Research</h3>
+        <p>Students are encouraged to participate in faculty-led research projects, publish papers, and present at national and international medical conferences.</p>
+        <a href="research.html" class="btn-text">Research Wing <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTMENTS SECTION -->
+<section class="depts-section" id="departments">
+  <div class="wrapper">
+    <div class="depts-inner">
+      <div style="text-align:center;">
+        <div class="section-tag" style="justify-content:center;">Departments</div>
+        <h2 class="section-heading white">Comprehensive Medical Specialities</h2>
+        <p class="section-sub white" style="max-width:600px;margin:0 auto;">Spanning Pre-Clinical, Para-Clinical, and Clinical disciplines — our departments provide holistic medical training aligned with NMC requirements.</p>
+      </div>
+      <div class="dept-tabs">
+        <button class="dept-tab pre active" onclick="showTab('pre')">Pre-Clinical</button>
+        <button class="dept-tab para" onclick="showTab('para')">Para-Clinical</button>
+        <button class="dept-tab cli" onclick="showTab('cli')">Clinical</button>
+      </div>
+      <div id="tab-pre" class="dept-panel active">
+        <div class="dept-card pre-style"><div class="dept-icon"><i class="ti ti-bone"></i></div><p>Anatomy</p></div>
+        <div class="dept-card pre-style"><div class="dept-icon"><i class="ti ti-activity"></i></div><p>Physiology</p></div>
+        <div class="dept-card pre-style"><div class="dept-icon"><i class="ti ti-flask"></i></div><p>Biochemistry</p></div>
+      </div>
+      <div id="tab-para" class="dept-panel">
+        <div class="dept-card para-style"><div class="dept-icon"><i class="ti ti-pill"></i></div><p>Pharmacology</p></div>
+        <div class="dept-card para-style"><div class="dept-icon"><i class="ti ti-gavel"></i></div><p>Forensic Medicine</p></div>
+        <div class="dept-card para-style"><div class="dept-icon"><i class="ti ti-virus"></i></div><p>Pathology</p></div>
+        <div class="dept-card para-style"><div class="dept-icon"><i class="ti ti-microscope"></i></div><p>Microbiology</p></div>
+        <div class="dept-card para-style"><div class="dept-icon"><i class="ti ti-building-community"></i></div><p>Community Medicine</p></div>
+      </div>
+      <div id="tab-cli" class="dept-panel">
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-stethoscope"></i></div><p>General Medicine</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-scalpel"></i></div><p>General Surgery</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-baby-carriage"></i></div><p>Paediatrics</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-gender-female"></i></div><p>Obstetrics &amp; Gynaecology</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-bone-off"></i></div><p>Orthopaedics</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-brain"></i></div><p>Psychiatry</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-eye"></i></div><p>Ophthalmology</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-ear"></i></div><p>ENT</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-heart-rate-monitor"></i></div><p>Emergency Medicine</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-vaccine"></i></div><p>ICU / MICU / SICU</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-skin-staple"></i></div><p>Dermatology</p></div>
+        <div class="dept-card cli-style"><div class="dept-icon"><i class="ti ti-radiology"></i></div><p>Radio Diagnosis</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats-section">
+  <div class="wrapper">
+    <div style="text-align:center;">
+      <div class="section-tag" style="justify-content:center;">By The Numbers</div>
+      <h2 class="section-heading">Institution at a Glance</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-icon"><i class="ti ti-bed"></i></div>
+        <div class="stat-num">464<span>+</span></div>
+        <div class="stat-label">Teaching Beds</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="ti ti-heart-rate-monitor"></i></div>
+        <div class="stat-num">84<span>+</span></div>
+        <div class="stat-label">ICU Beds</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="ti ti-building-hospital"></i></div>
+        <div class="stat-num">13<span>+</span></div>
+        <div class="stat-label">Departments</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="ti ti-scalpel"></i></div>
+        <div class="stat-num">26<span></span></div>
+        <div class="stat-label">Hospital Wards</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOSPITAL OVERVIEW -->
+<section class="hospital-section" id="hospital">
+  <div class="wrapper">
+    <div class="hosp-inner">
+      <div class="hosp-img-wrap">
+        <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=700&h=520&fit=crop" alt="Sanskriti Chikitsalaya Hospital">
+        <div class="hosp-float">
+          <strong>464+</strong>
+          <span>Total Teaching Beds</span>
+        </div>
+      </div>
+      <div>
+        <div class="section-tag">Sanskriti Chikitsalaya</div>
+        <h2 class="section-heading">A World-Class Teaching Hospital</h2>
+        <p class="section-sub" style="margin-bottom:28px;">Sanskriti Chikitsalaya at 28 K. M. Stone, Mathura - Delhi Highway, Mathura (U.P.), (INDIA) is our fully attached multi-speciality teaching hospital. With state-of-the-art facilities, it provides students unparalleled clinical exposure alongside delivering quality healthcare to the community.</p>
+        <div class="hosp-grid">
+          <div class="hosp-item"><i class="ti ti-urgent"></i><div><h4>Emergency (24×7)</h4><p>30 beds with Semi-Fowler setup</p></div></div>
+          <div class="hosp-item"><i class="ti ti-heartbeat"></i><div><h4>ICU / SICU / MICU / BICU</h4><p>20 ICU + 2 HDU beds</p></div></div>
+          <div class="hosp-item"><i class="ti ti-scalpel"></i><div><h4>Operation Theatres</h4><p>Fully equipped modular OTs</p></div></div>
+          <div class="hosp-item"><i class="ti ti-test-pipe"></i><div><h4>Diagnostics &amp; Lab</h4><p>Biochemistry, Microbiology, Radiology</p></div></div>
+          <div class="hosp-item"><i class="ti ti-pill"></i><div><h4>Pharmacy</h4><p>Round-the-clock pharmacy services</p></div></div>
+          <div class="hosp-item"><i class="ti ti-ambulance"></i><div><h4>Ambulance Services</h4><p>Advanced life support ambulances</p></div></div>
+          <div class="hosp-item"><i class="ti ti-droplet-half-2"></i><div><h4>Blood Bank</h4><p>NACO-compliant blood bank</p></div></div>
+          <div class="hosp-item"><i class="ti ti-users"></i><div><h4>Patient Facilities</h4><p>Canteen, waiting lounges, counselling</p></div></div>
+        </div>
+        <div style="margin-top:28px;">
+          <a href="hospital.html" class="btn-primary-red">View All Hospital Services <i class="ti ti-arrow-narrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BED DISTRIBUTION -->
+<section class="beds-section">
+  <div class="wrapper">
+    <div class="section-tag">Hospital Data</div>
+    <h2 class="section-heading">Departmentwise Bed Distribution</h2>
+    <p class="section-sub">Sanskriti Chikitsalaya, 28 K. M. Stone, Mathura - Delhi Highway, Mathura (U.P.), (INDIA) | NMC-Approved Bed Strength</p>
+    <div class="beds-inner">
+      <div class="beds-table-wrap">
+        <table class="beds-table">
+          <thead>
+            <tr>
+              <th>Sr.</th>
+              <th>Department</th>
+              <th>Unit</th>
+              <th>Ward</th>
+              <th>Beds</th>
+              <th>ICU</th>
+              <th>HDU</th>
+              <th>Motorized</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Emergency</td><td>1</td><td>1</td><td>30</td><td>30</td><td>0</td><td>30</td></tr>
+            <tr><td>2</td><td>ICU, SICU, MICU, BICU, HDU</td><td>5</td><td>5</td><td>20</td><td>20</td><td>2</td><td>22</td></tr>
+            <tr><td>3</td><td>Post OP</td><td>1</td><td>1</td><td>7</td><td>7</td><td>0</td><td>7</td></tr>
+            <tr><td>4</td><td>Pre OP</td><td>1</td><td>1</td><td>7</td><td>7</td><td>0</td><td>7</td></tr>
+            <tr><td>5</td><td>General Medicine</td><td>4</td><td>4</td><td>100</td><td>10</td><td>5</td><td>15</td></tr>
+            <tr><td>6</td><td>Dermatology</td><td>1</td><td>1</td><td>10</td><td>0</td><td>2</td><td>2</td></tr>
+            <tr><td>7</td><td>Psychiatry</td><td>1</td><td>1</td><td>10</td><td>0</td><td>2</td><td>2</td></tr>
+            <tr><td>8</td><td>Paediatrics</td><td>2</td><td>2</td><td>50</td><td>5</td><td>3</td><td>8</td></tr>
+            <tr><td>9</td><td>General Surgery</td><td>4</td><td>4</td><td>100</td><td>5</td><td>10</td><td>15</td></tr>
+            <tr><td>10</td><td>Orthopaedics</td><td>2</td><td>2</td><td>40</td><td>0</td><td>6</td><td>6</td></tr>
+            <tr><td>11</td><td>Ophthalmology</td><td>1</td><td>1</td><td>20</td><td>0</td><td>3</td><td>3</td></tr>
+            <tr><td>12</td><td>ENT</td><td>1</td><td>1</td><td>20</td><td>0</td><td>3</td><td>3</td></tr>
+            <tr><td>13</td><td>Obst. &amp; Gynae</td><td>2</td><td>2</td><td>50</td><td>0</td><td>8</td><td>8</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="4" style="text-align:left;">Total</td><td>464</td><td>84</td><td>44</td><td>128</td></tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="beds-summary">
+        <div class="beds-sum-card motorized">
+          <div class="beds-sum-num">128</div>
+          <div class="beds-sum-text"><strong>Total Motorized Beds</strong><span>Semi-Fowler beds across ICU, HDU &amp; Emergency departments</span></div>
+        </div>
+        <div class="beds-sum-card normal">
+          <div class="beds-sum-num">336</div>
+          <div class="beds-sum-text"><strong>Total Normal Beds</strong><span>General ward beds across all clinical departments</span></div>
+        </div>
+        <div class="beds-sum-card teaching">
+          <div class="beds-sum-num">464</div>
+          <div class="beds-sum-text"><strong>Teaching Beds (Incl. ICU/HDU)</strong><span>Total NMC-recognized clinical training capacity</span></div>
+        </div>
+        <div class="beds-note"><strong>Note:</strong> All ICU, HDU &amp; Emergency beds are Semi-Fowler beds. ICU and HDU beds are counted in the total bed strength as per NMC guidelines.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMICS / WHY US -->
+<section class="academics-section">
+  <div class="wrapper">
+    <div style="text-align:center;">
+      <div class="section-tag" style="justify-content:center;">Why Choose Us</div>
+      <h2 class="section-heading">Academic Excellence &amp; Infrastructure</h2>
+      <p class="section-sub" style="max-width:600px;margin:0 auto;">Our academic environment is built for producing physicians who are competent, ethical, and equipped for the demands of modern medicine.</p>
+    </div>
+    <div class="academics-grid">
+      <div class="acad-card">
+        <div class="acad-badge">Teaching</div>
+        <div style="font-size:44px;color:var(--indigo);"><i class="ti ti-school"></i></div>
+        <h3>Modern Lecture Theatres</h3>
+        <p>Air-conditioned, audio-visual equipped lecture halls with capacity for 150+ students. Integrated projectors, smart boards, and live OT streaming.</p>
+        <a href="infrastructure.html#academic-block" class="btn-text">Infrastructure <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+      <div class="acad-card">
+        <div class="acad-badge">Resources</div>
+        <div style="font-size:44px;color:var(--indigo);"><i class="ti ti-books"></i></div>
+        <h3>Central Library</h3>
+        <p>Over 50,000 volumes, international journals, e-library access (DELNET), and reading rooms operating from 6 AM to 10 PM every day.</p>
+        <a href="infrastructure.html#library" class="btn-text">Library Info <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+      <div class="acad-card">
+        <div class="acad-badge">Simulation</div>
+        <div style="font-size:44px;color:var(--indigo);"><i class="ti ti-activity"></i></div>
+        <h3>Skill &amp; Simulation Labs</h3>
+        <p>High-fidelity patient simulators, task trainers, and procedural skills labs designed to bridge the gap between theory and bedside practice.</p>
+        <a href="infrastructure.html#labs" class="btn-text">View Labs <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+      <div class="acad-card">
+        <div class="acad-badge">Residential</div>
+        <div style="font-size:44px;color:var(--indigo);"><i class="ti ti-home"></i></div>
+        <h3>Hostel Facilities</h3>
+        <p>Separate Boys, Girls, and Interns hostels with 24/7 security, Wi-Fi, dining, indoor recreation, and medical emergency support on campus.</p>
+        <a href="infrastructure.html#hostels" class="btn-text">Hostel Life <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+      <div class="acad-card">
+        <div class="acad-badge">Student Life</div>
+        <div style="font-size:44px;color:var(--indigo);"><i class="ti ti-trophy"></i></div>
+        <h3>Sports &amp; Cultural</h3>
+        <p>Sports complex, NSS chapter, cultural events, and student clubs that nurture the all-round development of every student alongside academic commitments.</p>
+        <a href="infrastructure.html#sports" class="btn-text">Student Life <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+      <div class="acad-card">
+        <div class="acad-badge">Safety</div>
+        <div style="font-size:44px;color:var(--indigo);"><i class="ti ti-shield-check"></i></div>
+        <h3>Safe Campus</h3>
+        <p>Zero-tolerance anti-ragging policy, active grievance redressal committee, women's cell, and CCTV surveillance ensuring a safe learning environment.</p>
+        <a href="about.html#governance" class="btn-text">Campus Safety <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS SECTION -->
+<section class="events-section" id="events">
+  <div class="wrapper">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+      <div>
+        <div class="section-tag">Events &amp; Workshops</div>
+        <h2 class="section-heading">Latest Events &amp; Workshops</h2>
+      </div>
+      <a href="media.html#events" class="btn-text">All Events <i class="ti ti-arrow-narrow-right"></i></a>
+    </div>
+    <div class="events-grid">
+      <div class="ev-card">
+        <div class="ev-img">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=220&fit=crop" alt="Induction Ceremony">
+          <div class="ev-date-badge"><strong>15</strong><span>Aug</span></div>
+        </div>
+        <div class="ev-body">
+          <h3><a href="media.html#events">Annual Induction Ceremony 2025</a></h3>
+          <div class="ev-meta"><i class="ti ti-clock" style="font-size:14px;"></i> 10:00 AM — Auditorium</div>
+          <p>Welcome ceremony for the new batch of MBBS students with white coat ceremony, oath-taking, and address by the Dean and Chairman.</p>
+        </div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-img">
+          <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=400&h=220&fit=crop" alt="CME Conference">
+          <div class="ev-date-badge"><strong>22</strong><span>Sep</span></div>
+        </div>
+        <div class="ev-body">
+          <h3><a href="media.html#events">State CME Conference — Emergency Medicine</a></h3>
+          <div class="ev-meta"><i class="ti ti-clock" style="font-size:14px;"></i> 9:00 AM — Conference Hall</div>
+          <p>A continuing medical education event featuring specialists from across North India presenting advances in Emergency Medicine and Trauma Care.</p>
+        </div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-img">
+          <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=220&fit=crop" alt="Blood Donation">
+          <div class="ev-date-badge"><strong>10</strong><span>Oct</span></div>
+        </div>
+        <div class="ev-body">
+          <h3><a href="media.html#events">NSS Blood Donation Camp 2025</a></h3>
+          <div class="ev-meta"><i class="ti ti-clock" style="font-size:14px;"></i> 9:00 AM — College Ground</div>
+          <p>Annual blood donation drive organized by our NSS unit in coordination with Sanskriti Chikitsalaya Blood Bank. Open to students, staff, and community.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS SECTION -->
+<section class="news-section" id="news">
+  <div class="wrapper">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+      <div>
+        <div class="section-tag">Latest Updates</div>
+        <h2 class="section-heading">News &amp; Announcements</h2>
+      </div>
+      <a href="media.html#news" class="btn-text">All News <i class="ti ti-arrow-narrow-right"></i></a>
+    </div>
+    <div class="news-grid">
+      <div class="news-item news-featured">
+        <div class="news-img"><img src="https://images.unsplash.com/photo-1581093806997-124204d9fa9d?w=600&h=320&fit=crop" alt="Faculty Achievement"></div>
+        <div class="news-meta"><span class="news-cat">Achievement</span><span class="news-date">May 5, 2026</span></div>
+        <div class="news-title"><a href="media.html#news">Faculty Member Wins First Prize at National Anatomy Conference 2026 in New Delhi</a></div>
+        <p style="font-size:14px;color:var(--muted);margin-top:10px;line-height:1.7;">Dr. Priya Sharma from the Department of Anatomy was awarded the Best Research Presentation prize at the 68th National Anatomy Conference, recognizing outstanding work in neuroanatomy and surgical applications.</p>
+        <a href="media.html#news" class="btn-text" style="margin-top:14px;">Read More <i class="ti ti-arrow-narrow-right"></i></a>
+      </div>
+      <div>
+        <div class="news-side-items">
+          <div class="news-side-item">
+            <div class="news-img"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=90&h=70&fit=crop" alt="Admission"></div>
+            <div><div class="news-meta"><span class="news-cat">Admissions</span><span class="news-date">Apr 28, 2026</span></div><div class="news-title"><a href="admissions.html">MBBS 2026 Admission Portal Now Open — Apply with Your NEET Score</a></div></div>
+          </div>
+          <div class="news-side-item">
+            <div class="news-img"><img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=90&h=70&fit=crop" alt="Research"></div>
+            <div><div class="news-meta"><span class="news-cat">Research</span><span class="news-date">Apr 15, 2026</span></div><div class="news-title"><a href="research.html#publications">SSMCRC Research Team Publishes Study on Maternal Health Outcomes in Rural UP</a></div></div>
+          </div>
+          <div class="news-side-item">
+            <div class="news-img"><img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=90&h=70&fit=crop" alt="Infrastructure"></div>
+            <div><div class="news-meta"><span class="news-cat">Infrastructure</span><span class="news-date">Mar 30, 2026</span></div><div class="news-title"><a href="infrastructure.html#labs">New Simulation Lab with High-Fidelity Mannequins Inaugurated on Campus</a></div></div>
+          </div>
+          <div class="news-side-item">
+            <div class="news-img"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=90&h=70&fit=crop" alt="Sports"></div>
+            <div><div class="news-meta"><span class="news-cat">Sports</span><span class="news-date">Mar 12, 2026</span></div><div class="news-title"><a href="infrastructure.html#sports">Students Win Zonal-Level Cricket Tournament — Represent UPUMS Region</a></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="news-side-items">
+          <div class="news-side-item">
+            <div class="news-img"><img src="https://images.unsplash.com/photo-1576671081837-49000212a370?w=90&h=70&fit=crop" alt="Workshop"></div>
+            <div><div class="news-meta"><span class="news-cat">Workshop</span><span class="news-date">Feb 20, 2026</span></div><div class="news-title"><a href="academics.html#teaching">Hands-on Surgical Skills Workshop Conducted for Final-Year MBBS Batch</a></div></div>
+          </div>
+          <div class="news-side-item">
+            <div class="news-img"><img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=90&h=70&fit=crop" alt="Community"></div>
+            <div><div class="news-meta"><span class="news-cat">Community</span><span class="news-date">Feb 10, 2026</span></div><div class="news-title"><a href="media.html#news">Free Health Camp Organized at Chhata Village — 800 Patients Examined</a></div></div>
+          </div>
+          <div class="news-side-item">
+            <div class="news-img"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=90&h=70&fit=crop" alt="NMC"></div>
+            <div><div class="news-meta"><span class="news-cat">Regulatory</span><span class="news-date">Jan 25, 2026</span></div><div class="news-title"><a href="statutory.html#nmc">NMC Annual Inspection Successfully Completed — Full Compliance Certified</a></div></div>
+          </div>
+          <div class="news-side-item">
+            <div class="news-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=90&h=70&fit=crop" alt="Faculty"></div>
+            <div><div class="news-meta"><span class="news-cat">Faculty</span><span class="news-date">Jan 10, 2026</span></div><div class="news-title"><a href="academics.html#faculty">Prof. R.K. Verma Appointed as Head of Department — General Surgery</a></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section" id="testimonials">
+  <div class="wrapper">
+    <div style="text-align:center;">
+      <div class="section-tag" style="justify-content:center;">Testimonials</div>
+      <h2 class="section-heading">Success Stories &amp; Testimonials</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote"><i class="ti ti-quote" style="font-size:18px;"></i></div>
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop" alt="Dr. Priya S" class="testi-avatar">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">My time at SSMCRC has been nothing short of transformational. The clinical exposure at Sanskriti Chikitsalaya — 464 beds under one roof — gave me confidence that no other college in the region could match. The faculty truly cares.</p>
+        <div class="testi-name">Dr. Priya Sharma</div>
+        <div class="testi-role">MBBS 2023 Graduate · General Surgery</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote"><i class="ti ti-quote" style="font-size:18px;"></i></div>
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&h=200&fit=crop" alt="Dr. Arjun K" class="testi-avatar">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">From the anatomy labs to the ICU rounds, every day at SSMCRC pushed me to be better. The simulation lab is exceptional and the hostel environment kept us focused. The mentorship here is genuinely outstanding.</p>
+        <div class="testi-name">Dr. Arjun Kapoor</div>
+        <div class="testi-role">MBBS 2022 Graduate · Paediatrics PG aspirant</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote"><i class="ti ti-quote" style="font-size:18px;"></i></div>
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=200&h=200&fit=crop" alt="Dr. Meena R" class="testi-avatar">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">As a girl coming from a small town in UP, campus safety was my biggest concern. SSMCRC gave me a secure, supportive environment. The Women's Cell and the active anti-ragging committee made my five years here stress-free and productive.</p>
+        <div class="testi-name">Dr. Meena Rawat</div>
+        <div class="testi-role">Final Year MBBS · Batch 2021</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCREDITATIONS -->
+<section class="accred-section">
+  <div class="wrapper">
+    <div style="text-align:center;">
+      <div class="section-tag" style="justify-content:center;">Recognition</div>
+      <h2 class="section-heading">Approvals, Affiliations &amp; Recognitions</h2>
+      <p class="section-sub" style="max-width:600px;margin:0 auto;">Our credentials speak for our quality — recognized by national bodies and affiliated to the premier medical university of Uttar Pradesh.</p>
+    </div>
+    <div class="accred-logos">
+      <div class="accred-item">
+        <a href="statutory.html#nmc" class="accred-circle"><i class="ti ti-certificate"></i></a>
+        <div class="accred-label">NMC Approved</div>
+      </div>
+      <div class="accred-item">
+        <a href="about.html#approvals" class="accred-circle"><i class="ti ti-school"></i></a>
+        <div class="accred-label">UPUMS Affiliated</div>
+      </div>
+      <div class="accred-item">
+        <a href="hospital.html" class="accred-circle"><i class="ti ti-building-hospital"></i></a>
+        <div class="accred-label">Teaching Hospital</div>
+      </div>
+      <div class="accred-item">
+        <a href="statutory.html" class="accred-circle"><i class="ti ti-shield-check"></i></a>
+        <div class="accred-label">Govt. of India</div>
+      </div>
+      <div class="accred-item">
+        <a href="hospital.html#diagnostics" class="accred-circle"><i class="ti ti-test-pipe"></i></a>
+        <div class="accred-label">NABL Lab</div>
+      </div>
+      <div class="accred-item">
+        <a href="hospital.html#blood-bank" class="accred-circle"><i class="ti ti-droplet-half-2"></i></a>
+        <div class="accred-label">NACO Blood Bank</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT STRIP -->
+<section class="contact-strip">
+  <div class="wrapper">
+    <div class="cs-inner">
+      <div class="cs-left">
+        <h2>Ready to Begin Your Medical Journey?</h2>
+        <p>Join Sanskriti Santosh Medical College — MBBS Admissions 2026 are open. Apply with your NEET score today.</p>
+      </div>
+      <div class="cs-actions">
+        <a href="admissions.html" class="btn-primary-red">Apply for MBBS 2026 <i class="ti ti-arrow-narrow-right"></i></a>
+        <a href="tel:+915652280001" class="btn-outline-white"><i class="ti ti-phone"></i> Call Helpline</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="wrapper">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <a href="index.html"><img src="assets/img/logo.jpeg" alt="Sanskriti Santosh Medical College Logo"></a>
+          </div>
+          <p>Sanskriti Santosh Medical College &amp; Research Centre is a NMC-approved institution on 28 K. M. Stone, Mathura - Delhi Highway, Mathura (U.P.). We are dedicated to producing compassionate, competent physicians through excellence in medical education and clinical training at Sanskriti Chikitsalaya.</p>
+          <div class="footer-socials" style="margin-top:20px;">
+            <a href="#" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="ti ti-brand-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="ti ti-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="ti ti-chevron-right"></i> About Us</a></li>
+            <li><a href="admissions.html"><i class="ti ti-chevron-right"></i> MBBS Admissions</a></li>
+            <li><a href="academics.html"><i class="ti ti-chevron-right"></i> Departments</a></li>
+            <li><a href="hospital.html"><i class="ti ti-chevron-right"></i> Hospital</a></li>
+            <li><a href="research.html"><i class="ti ti-chevron-right"></i> Research</a></li>
+            <li><a href="media.html"><i class="ti ti-chevron-right"></i> Media</a></li>
+            <li><a href="contact.html"><i class="ti ti-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Statutory</div>
+          <ul class="footer-links">
+            <li><a href="statutory.html#nmc"><i class="ti ti-chevron-right"></i> NMC Documents</a></li>
+            <li><a href="statutory.html#faculty-list"><i class="ti ti-chevron-right"></i> Faculty List</a></li>
+            <li><a href="statutory.html#intake"><i class="ti ti-chevron-right"></i> Student Intake</a></li>
+            <li><a href="statutory.html#beds"><i class="ti ti-chevron-right"></i> Bed Strength</a></li>
+            <li><a href="statutory.html#hospital-stats"><i class="ti ti-chevron-right"></i> Hospital Stats</a></li>
+            <li><a href="statutory.html#affidavits"><i class="ti ti-chevron-right"></i> Affidavits</a></li>
+            <li><a href="statutory.html#privacy"><i class="ti ti-chevron-right"></i> Privacy Policy</a></li>
+            <li><a href="statutory.html#anti-ragging"><i class="ti ti-chevron-right"></i> Anti-Ragging</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact Us</div>
+          <div class="footer-contact-item">
+            <i class="ti ti-map-pin"></i>
+            <div><strong>Address</strong>28 K. M. Stone, Mathura - Delhi Highway, Mathura (U.P.), (INDIA) – 281401</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ti ti-phone"></i>
+            <div><strong>Phone</strong>+91-565-228-0000 (College)<br>+91-565-228-0001 (Admissions)</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ti ti-mail"></i>
+            <div><strong>Email</strong>info.ssmcrc@sanskriti.edu.in<br>info.ssmcrc@sanskriti.edu.in</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ti ti-clock"></i>
+            <div><strong>Office Hours</strong>Mon – Sat: 9:00 AM – 5:00 PM</div>
+          </div>
+          <div style="margin-top:16px;">
+            <a href="contact.html#whatsapp" style="display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;font-family:'Montserrat',sans-serif;">
+              <i class="ti ti-brand-whatsapp"></i> WhatsApp Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrapper">
+      <div class="footer-bottom-inner">
+        <p>© 2026 Sanskriti Santosh Medical College &amp; Research Centre. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="statutory.html#privacy">Privacy Policy</a>
+          <a href="statutory.html#terms">Terms of Use</a>
+          <a href="statutory.html">Sitemap</a>
+          <a href="statutory.html#disclaimer">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<a href="#" class="back-to-top" id="backToTop"><i class="ti ti-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Sticky header
+const headerBottom = document.getElementById('headerBottom');
+const mainHeader = document.getElementById('mainHeader');
+const topBarH = document.querySelector('.notice-bar').offsetHeight + document.querySelector('.header-top').offsetHeight;
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > topBarH + 40){
+    headerBottom.classList.add('fixed');
+  } else {
+    headerBottom.classList.remove('fixed');
+  }
+  // Back to top
+  const btn = document.getElementById('backToTop');
+  if(window.scrollY > 400){
+    btn.classList.add('show');
+  } else {
+    btn.classList.remove('show');
+  }
+});
+
+// Dept tabs
+function showTab(id){
+  document.querySelectorAll('.dept-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.dept-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// Back to top smooth
+document.getElementById('backToTop').addEventListener('click', e => {
+  e.preventDefault();
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+// Counter animation on scroll
+function animateCounter(el, target, duration){
+  let start = 0;
+  const step = target / (duration / 16);
+  const timer = setInterval(() => {
+    start += step;
+    if(start >= target){
+      start = target;
+      clearInterval(timer);
+    }
+    el.textContent = Math.floor(start);
+  }, 16);
+}
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const nums = e.target.querySelectorAll('.stat-num');
+      nums.forEach(n => {
+        const text = n.innerHTML;
+        const match = text.match(/^(\d+)/);
+        if(match){
+          const span = n.querySelector('span');
+          animateCounter(n, parseInt(match[1]), 1500);
+          if(span) setTimeout(() => n.appendChild(span), 1500);
+        }
+      });
+      statsObserver.unobserve(e.target);
+    }
+  });
+},{threshold:0.3});
+const statsSection = document.querySelector('.stats-section');
+if(statsSection) statsObserver.observe(statsSection);
+</script>
+</body>
+</html>
